@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:aop="http://www.springframework.org/schema/aop"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+       http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop.xsd">
+    <!--<context:annotation-config/>-->
+    <!--<context:component-scan base-package="service"></context:component-scan>-->
+    <context:annotation-config/>
+    <context:component-scan base-package="configuration"></context:component-scan>
+
+    <!--<bean id="aop"  class="aspect.EmployeeAspect"></bean>-->
+    <!--<aop:aspectj-autoproxy></aop:aspectj-autoproxy>-->
+    <!--<aop:config proxy-target-class="false">-->
+        <!--<aop:aspect ref="aop">-->
+            <!--<aop:before method="logEntry"  pointcut="execution(* *(..))"></aop:before>-->
+            <!--<aop:around method="timeTaken" pointcut="execution(* *(..))"></aop:around>-->
+        <!--</aop:aspect>-->
+    <!--</aop:config>-->
+</beans>

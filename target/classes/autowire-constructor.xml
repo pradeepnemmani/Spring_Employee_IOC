@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:util="http://www.springframework.org/schema/util"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+       http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util-2.5.xsd">
+    <bean id="address" name="address" class="model.Address">
+        <property name="hNo" value="4-9-772/6"/>
+        <property name="area" value="yellareddy colony"/>
+        <property name="city" value="hyderabad"/>
+        <property name="street" value="near yellreddy communnity hall"/>
+        <property name="country" value="india"/>
+        <property name="state" value="telangana"/>
+    </bean>
+    <bean id="pradeep" name="ceo" class="model.Person" >
+        <property name="firstName" value="pradeep"/>
+        <property name="lastName" value="nemmani"/>
+        <property name="address" ref="address"/>
+        <property name="phNo" value="9000128263"/>
+    </bean>
+    <bean id="syam" name="syam" class="model.Person" >
+        <property name="firstName" value="syam"/>
+        <property name="lastName" value="akyana"/>
+        <property name="address" ref="address"/>
+        <property name="phNo" value="987843653"/>
+    </bean>
+    <!--<bean name="Nalsoft" id="Nalsoft" class="model.Company" autowire="constructor" >-->
+    <!--<property name="cId" value="CMP-001-NAL"/>-->
+       <!--<property name="employees" value="empList"/>-->
+
+    <!--</bean>-->
+    <util:list value-type="model.Person" id="empList">
+        <value>syam</value>
+        <value>ceo</value>
+    </util:list>
+</beans>
